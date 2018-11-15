@@ -191,25 +191,25 @@
         </div>
 
         <div class="col-md-12 col-xs-12 login_control">
-          <form method="post" action="php\EnregistrementInscription.php">
+          <form method="post" id="myform" onSubmit="return validate();" action="php\EnregistrementInscription.php">
             <div class="control">
               <div class="label">Votre adresse e-mail</div>
-              <input type="email" class="form-control" name="email" placeholder="exemple@gmail.com" control-label required />
+              <input type="email" id="email" class="form-control" name="email" placeholder="exemple@gmail.com" control-label required />
             </div>
             <div class="control">
               <div class="label">Votre Pseudo</div>
-              <input type="text" class="form-control" name="pseudo" placeholder="Palero974" required />
+              <input type="text" id="pseudo" class="form-control" name="pseudo" placeholder="Palero974" required />
             </div>
             <div class="control">
               <div class="label">Votre mot de passe</div>
-              <input type="password" class="form-control" name="motdepasse" required />
+              <input type="password" id="mdp" class="form-control" name="motdepasse" required />
             </div>
             <div class="control">
               <div class="label">Répétez votre mot de passe</div>
-              <input type="password" class="form-control" name="motdepasse" required />
+              <input type="password" id="vmdp" class="form-control" name="motdepasse" required />
             </div>
             <div align="center">
-              <button class="btn btn-orange" disabled>S'inscrire</button>
+              <button class="btn btn-orange" id="submitButton" >S'inscrire</button>
             </div>
           </form>
         </div>
@@ -218,12 +218,90 @@
   </div>
 
   <script type="text/javascript">
-    $(function(){
-      if (($('email').val()=='') && ($('pseudo').val()=='') && ($('mdp').val()=='') && ($('vmdp').val()=='')){
-        alert("Attention, vous n'avez pas rempli certains champs...");
-      }
-    })
+
+  // function test() {
+  //   var motDePasse = document.getElementById("mdp").value;
+  //   var buttonInscription = document.getElementById("submitButton");
+  //   if(motDePasse.lenght= 0){
+  //     alert("shit");
+  //     buttonInscription.disabled;
+  //   }
+  // };
+
+    function validate() {
+
+            var motDePasse = document.getElementById("mdp").value;
+            var confirmationMotDePAsse = document.getElementById("vmdp").value;
+            var mail = document.getElementById("email").value;
+            var pseudo = document.getElementById("pseudo").value;
+            var buttonInscription = document.getElementById("submitButton");
+
+            // while((motDePasse || confirmationMotDePAsse || mail || pseudo).value("")){
+            //   buttonInscription = buttonInscription.disabled;
+            // }
+
+
+
+            if (motDePasse!=confirmationMotDePAsse) {
+            	alert("Les mots de passe ne correspondent pas.");
+            	return false; }
+            else {
+            	return true; }
+            };
   </script>
+
+<!-- <script type="text/javascript">
+// $(document).ready(function(){
+//   while((document.getElementById("email")).val().lenght=0){
+//     document.getElementById("submitButton").disabled = true;
+//   }
+// });
+
+// $(document).ready(function(){
+//   while(document.getElementById('email').val()=''){
+//     document.getElementById('submitButton').disabled = true;
+//   }else{
+//     document.getElementById('submitButton').disabled = false;
+//   }
+// });
+
+
+
+</script> -->
+  <!-- <script type="text/javascript">
+  $(document).ready(function() {
+
+    $('input').on('keyup', function() {
+        if ($("#myform").valid()) {
+            $('#submitButton').prop('disabled', false);
+        } else {
+            $('#submitButton').prop('disabled', 'disabled');
+        }
+    });
+
+    $("#myform").validate({
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },
+            pseudo:{
+              required:true,
+              minlength:3
+            },
+            mdp:{
+              required:true,
+              minlenght:5
+            },
+            vmdp:{
+              required:true,
+              minlenght:5,
+            }
+        }
+    });
+
+});
+  </script> -->
 
 <!-- Container pour ajouter un article -->
     <form id="container_ajouter_un_article" method="POST">
@@ -253,6 +331,7 @@
 <?php
 include("js/js_included.js");
 ?>
+
 
 </body>
 
