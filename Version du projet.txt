@@ -1,0 +1,89 @@
+----------------------
+Version du projet 0.79
+
+Compréhension du commit github OK
+Rename du fichier Version.txt
+
+----------------------
+Version du projet 0.78
+
+Ajout du projet sur GitHub
+
+----------------------
+Version du projet 0.77
+
+Passage du fixed sur le container connexion / inscription en position absolute.
+(Mise en place d'un responsive unique pour ce container.)
+
+
+----------------------
+Version du projet 0.76
+
+Optimisation du code PHP
+Finalisation de la partie ajout article
+Connexion utilisateurs sp�cifi� corrig�
+
+----------------------
+Version du projet 0.74
+
+Ajout de bouton editor dans l'ajout d'un article
+Modification global mineur
+Optimisation Mineur du back-end
+Optimisation de quelques ligne PHP
+Suppression de fichier inutile.
+
+----------------------
+Version du projet 0.69
+
+Ajout des images en ajout article
+ajout d'une date fonctionnel dans les article
+Pseudo affich� pour le cr�ateur de l'article
+Les images ne supporte pour le moment que les liens
+Articles Base de donn�e
+Ajout de table suppl�mentaire dans la table article
+Ajout d'un current_date
+Modification de la base de donn�e
+Correction de divers probl�me lors de la connexion
+
+A faire :
+
+Mettre en place la page acceuilconnexion en page par d�faut avec les articles � jours
+Mise en place d'une section commentaire actif
+Mise en place de la page index en dynamique
+
+----------------------
+Version du projet 0.61
+
+Ajout d'une section commentaire et article
+L'ajout d'un article est int�gr� dans la base de donn�e
+L'ajout d'un commentaire est int�gr� dans la base de donn�e
+les requ�tes sont fonctionnelles
+
+----------------------
+Version du projet 0.59
+
+Modification de la bdd
+int�gration du php
+inscription ok
+connection peut-�tre ok (a v�rifier)
+mise en place de check
+ajout d'un svg
+inscription et redirection sur l'index ok
+
+----------------------
+Version du projet 0.57
+
+Modification du index.php + style.css
+Ajout d'un logo provisoire dans l'interface de connexion / inscription
+
+----------------------
+Version du projet 0.54
+
+Refonte graphique compl�te
+Ajout de divers �l�ments
+Mise en place du PHP / SQL / BDD (Ajout en cours)
+
+----------------------
+Version du projet 0.34
+
+Modification complete
